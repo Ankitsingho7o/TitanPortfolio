@@ -63,7 +63,7 @@ body {
   overflow: hidden;
   /* border-radius:  0 0 20% 20% ; */
 }
-.wrapper {
+.wrapperr {
   box-sizing: content-box;
   display: flex;
   height: 6rem;
@@ -429,10 +429,10 @@ div[class*="Info"] :nth-child(2) {
 .projectCardContainer {
   width: 90%;
   margin: auto;
-  /* display: grid; */
-  /* grid-template-columns: repeat(3,1fr); */
-  /* grid-template-rows: repeat(2,30rem); */
-  /* gap: 3rem; */
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(3,1fr);
+
 }
 .projectCard {
   color: white;
@@ -504,20 +504,7 @@ div[class*="Info"] :nth-child(2) {
   background-color: #00417b;
   border-radius: 0.2rem;
 }
-/* .card-1{
-  background-color: pink;
-}
-.card-2{
-  background-color: red;
-}.card-3{
-  background-color: yellow;
-}.card-4{
-  background-color: orange;
-}.card-5{
-  background-color:skyblue ;
-}.card-6{
-  background-color: hotpink ;
-} */
+
 
 /* **************************Connect************************************************ */
 .connect {
@@ -536,6 +523,8 @@ div[class*="Info"] :nth-child(2) {
 }
 .connect2 {
   width: 50%;
+  display: flex;
+  flex-direction: column;
 }
 .letsconnect > h1 {
   font-size: 8vw;
@@ -580,17 +569,130 @@ div[class*="Info"] :nth-child(2) {
 }
 
 .codingLinks {
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: #fff;
   font-family: sans-serif;
+  margin-bottom: 2rem;
 }
 
 .codingIcons {
   display: flex;
   width: 100%;
   align-items: center;
-  justify-content: space-evenly;
+  list-style: none;
 }
 .codeIcons {
-  
+  margin-right: 3rem;
+  margin-bottom: 2rem;
+}
+
+.socialIcons
+{
+  /* display: grid;
+  height: 100%; */
+  width: 100%;
+
+}
+.wrapper{
+  height: 3rem;
+}
+.wrapper .button{
+  display: inline-block;
+  height: 5rem;
+  width: 5rem;
+  float: left;
+  margin-right: 3rem;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 8rem;
+  cursor: pointer;
+  box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover{
+  width: 20rem;
+}
+.wrapper .button .icon{
+  display: inline-block;
+  height: 5rem;
+  width: 5rem;
+  text-align: center;
+  border-radius: 8rem;
+  box-sizing: border-box;
+  line-height: 3rem;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:nth-child(1):hover .icon{
+  background: #4267B2;
+}
+.wrapper .button:nth-child(2):hover .icon{
+  background: #1DA1F2;
+}
+.wrapper .button:nth-child(3):hover .icon{
+  background: #E1306C;
+}
+.wrapper .button:nth-child(4):hover .icon{
+  background: #0077b5;
+}
+.wrapper .button:nth-child(5):hover .icon{
+  background: #ff0000;
+}
+.wrapper .button .icon i{
+  font-size: 25px;
+  line-height: 4.9rem;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover .icon i{
+  color: #fff;
+}
+.wrapper .button span{
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 4.9rem;
+  margin-left: 1rem;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:nth-child(1) span{
+  color: #4267B2;
+}
+.wrapper .button:nth-child(2) span{
+  color: #1DA1F2;
+}
+.wrapper .button:nth-child(3) span{
+  color: #E1306C;
+}
+.wrapper .button:nth-child(4) span{
+  color: #0077b5;
+}
+.wrapper .button:nth-child(5) span{
+  color: #ff0000;
+}
+
+.contactMe
+{
+  margin-top: 2rem;
+  font-size: 3rem;
+  color: #fff;
+  font-family: sans-serif;
+}
+.contactHeading
+{
+  margin-top: 2rem;
+}
+.contactIcon
+{
+  display: flex;
+  align-items: center;
+  list-style: none;
+  /* justify-content: space-around; */
+
+}
+.contactMeIcons{
+  display: inline-block;
+  margin-right: 3rem;
+}
+.phone{
+  font-size: 2.5rem;
+  color: #fff;
+  text-decoration: none;
 }
