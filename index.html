@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TiTAN</title>
     <link rel="stylesheet" href="./CSS/style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
     <script
       src="https://kit.fontawesome.com/024a3840b0.js"
       crossorigin="anonymous"
@@ -42,15 +45,26 @@
       </ul>
     </header>
     <section class="heroSection">
-      <div class="balls ball1">
+      <div class="balls ball1 upperBowls">
         <h2>Developer</h2>
       </div>
-      <div class="balls ball2">
+      <div class="balls ball2 upperBowls">
         <h2>Explorer</h2>
       </div>
       <div class="candid">
         <h2 id="text">Ankit Singh/></h2>
       </div>
+      <div class="scrollDown">
+        <i class="fa-solid fa-angles-down fa-2xl scrolldown"></i>
+        <div>
+        <h2>scroll down</h2>
+  
+        </div>
+      </div>
+
+      <a href="https://api.whatsapp.com/send?phone=+917891876642&amp;text=Hello%20Please%20contact%20me&amp;source=&amp;data=" target="_blank" onclick="ga('send', 'event', { eventCategory: 'watsapp button', eventAction: 'click', eventLabel: 'button', eventValue: 100});">
+        <i class="fa-brands fa-whatsapp fa-2xl callus1" alt="image of whatsapp icon"></i>
+    </a>
     </section>
 
     <!-- ---------------------------------About US------------------------------- -->
@@ -143,60 +157,63 @@
       </div>
 
       <!-- <div class="projectCardContent"> -->
-        <div class="projectCardContainer">
-      <div class="projectCard card-1">
-        <div class="projectCardContent">
-          <h2 class="projectCardTitle">Netflix</h2>
-          <p class="projectCardP1">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Consectetur, quaerat.
-          </p>
+      <div class="projectCardContainer">
+        <div class="projectCard grid-col-span-2">
+          <div class="projectCardContent">
+            <h2 class="projectCardTitle">Netflix</h2>
+            <p class="projectCardP1">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Consectetur, quaerat.
+            </p>
 
-          <a href="" class="projectButton">Learn More</a>
+            <a href="" class="projectButton">Learn More</a>
+          </div>
+        </div>
+        <div class="projectCard">
+          <div class="projectCardContent">
+            <h2 class="projectCardTitle">Netflix</h2>
+            <p class="projectCardP1">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Consectetur, quaerat.
+            </p>
+
+            <a href="" class="projectButton">Learn More</a>
+          </div>
+        </div>
+        <div class="projectCard">
+          <div class="projectCardContent">
+            <h2 class="projectCardTitle">Netflix</h2>
+            <p class="projectCardP1">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Consectetur, quaerat.
+            </p>
+
+            <a href="" class="projectButton">Learn More</a>
+          </div>
+        </div>
+        <div class="projectCard grid-col-span-2">
+          <div class="projectCardContent">
+            <h2 class="projectCardTitle">Netflix</h2>
+            <p class="projectCardP1">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Consectetur, quaerat.
+            </p>
+
+            <a href="" class="projectButton">Learn More</a>
+          </div>
+        </div>
+        <div class="projectCard lastProjectCard">
+          <div class="projectCardContent">
+            <h2 class="projectCardTitle">Netflix</h2>
+            <p class="projectCardP1">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Consectetur, quaerat.
+            </p>
+
+            <a href="" class="projectButton">Learn More</a>
+          </div>
         </div>
       </div>
-      <div class="projectCard card-1">
-        <div class="projectCardContent">
-          <h2 class="projectCardTitle">Netflix</h2>
-          <p class="projectCardP1">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Consectetur, quaerat.
-          </p>
-
-          <a href="" class="projectButton">Learn More</a>
-        </div>
-      </div>   <div class="projectCard card-1">
-        <div class="projectCardContent">
-          <h2 class="projectCardTitle">Netflix</h2>
-          <p class="projectCardP1">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Consectetur, quaerat.
-          </p>
-
-          <a href="" class="projectButton">Learn More</a>
-        </div>
-      </div>   <div class="projectCard card-1">
-        <div class="projectCardContent">
-          <h2 class="projectCardTitle">Netflix</h2>
-          <p class="projectCardP1">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Consectetur, quaerat.
-          </p>
-
-          <a href="" class="projectButton">Learn More</a>
-        </div>
-      </div>   <div class="projectCard card-1">
-        <div class="projectCardContent">
-          <h2 class="projectCardTitle">Netflix</h2>
-          <p class="projectCardP1">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Consectetur, quaerat.
-          </p>
-
-          <a href="" class="projectButton">Learn More</a>
-        </div>
-      </div>
-    </div>
     </section>
 
     <!----------------------------------Connect Section----------------------------->
@@ -239,65 +256,84 @@
       <div class="connect2">
         <div class="codingLinks"><h2>Coding Platforms</h2></div>
         <div class="codingIcons">
-
-          
-          <li class="codeIcons"><a href="" title="LeetCode"><img src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/null/external-level-up-your-coding-skills-and-quickly-land-a-job-logo-color-tal-revivo.png"/></a></li>
-          <li class="codeIcons"><a href=""><img src="https://img.icons8.com/color/48/000000/GeeksforGeeks.png"/></a></li>
-          <li class="codeIcons"><a href=""><img src="https://img.icons8.com/external-tal-revivo-bold-tal-revivo/48/null/external-github-community-for-software-building-and-testing-online-logo-bold-tal-revivo.png"/></a></li>
-          <li class="codeIcons"><a href=""><img src="https://img.icons8.com/windows/48/4ED82D/hackerrank.png"/></a></li>
-          
-        
+          <li class="codeIcons">
+            <a href="" title="LeetCode"
+              ><img
+                src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/null/external-level-up-your-coding-skills-and-quickly-land-a-job-logo-color-tal-revivo.png"
+            /></a>
+          </li>
+          <li class="codeIcons">
+            <a href=""
+              ><img
+                src="https://img.icons8.com/color/48/000000/GeeksforGeeks.png"
+            /></a>
+          </li>
+          <li class="codeIcons">
+            <a href=""
+              ><img
+                src="https://img.icons8.com/external-tal-revivo-bold-tal-revivo/48/null/external-github-community-for-software-building-and-testing-online-logo-bold-tal-revivo.png"
+            /></a>
+          </li>
+          <li class="codeIcons">
+            <a href=""
+              ><img
+                src="https://img.icons8.com/windows/48/4ED82D/hackerrank.png"
+            /></a>
+          </li>
         </div>
 
         <div class="codingLinks"><h2>Social Media Accounts</h2></div>
         <div class="socialIcons">
-
           <div class="wrapper">
             <div class="button">
-               <div class="icon">
-                  <i class="fab fa-facebook-f"></i>
-               </div>
-               <span>Facebook</span>
+              <div class="icon">
+                <i class="fab fa-facebook-f fb"></i>
+              </div>
+              <span>Facebook</span>
             </div>
             <div class="button">
-               <div class="icon">
-                  <i class="fab fa-twitter"></i>
-               </div>
-               <span>Twitter</span>
+              <div class="icon">
+                <i class="fab fa-twitter tw"></i>
+              </div>
+              <span>Twitter</span>
             </div>
             <div class="button">
-               <div class="icon">
-                  <i class="fab fa-instagram"></i>
-               </div>
-               <span>Instagram</span>
+              <div class="icon">
+                <i class="fab fa-instagram insta"></i>
+              </div>
+              <span>Instagram</span>
             </div>
             <div class="button">
-               <div class="icon">
-                  <i class="fab fa-linkedin"></i>
-               </div>
-               <span>Linkedin</span>
+              <div class="icon">
+                <i class="fab fa-linkedin ln"></i>
+              </div>
+              <span>Linkedin</span>
             </div>
-            <div class="button">
-               <div class="icon">
-                  <i class="fab fa-youtube"></i>
-               </div>
-               <span>YouTube</span>
-            </div>
-         </div>
-          </div>
-         
-          <div class="codingLinks"><h2 class="contactHeading">Contact Me</h2></div>
-          <div class="contactIcon">
-            <li class="contactMeIcons"><a><img src="https://img.icons8.com/color/42/null/gmail-new.png"/></a></li>
- 
-  <li class="contactMeIcons"><pre> <a class="phone" href="tel:+91 7891 876 642"><i class="fa-solid fa-phone-volume fa-md" style="color:#3aafc9 ;"></i>   +91 7891876642 </a></pre></li>
+            <!-- <div class="button">
+              <div class="icon">
+                <i class="fab fa-youtube"></i>
+              </div>
+              <span>YouTube</span>
+            </div> -->
           </div>
         </div>
 
+        <div class="codingLinks">
+          <h2 class="contactHeading">Contact Me</h2>
+        </div>
+        <div class="contactIcon">
+          <li class="contactMeIcons">
+            <a
+              ><img src="https://img.icons8.com/color/42/null/gmail-new.png"
+            /></a>
+          </li>
 
+          <li class="contactMeIcons">
+            <pre> <a class="phone" href="tel:+91 7891 876 642"><i class="fa-solid fa-phone-volume fa-md" style="color: #6d7074 ;"></i>   +91 7891876642 </a></pre>
+          </li>
+        </div>
       </div>
     </section>
     <script src="script.js"></script>
   </body>
 </html>
-

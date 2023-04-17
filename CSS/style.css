@@ -206,7 +206,6 @@ section .ball2 {
   position: absolute;
   bottom: 20rem;
   right: 20rem;
-  transform: rotate(15deg);
   background-color: var(--ballColor2);
   letter-spacing: 0.2rem;
 }
@@ -215,6 +214,10 @@ section .ball2 {
   font-weight: bold;
   font-size: 2.3rem;
 }
+.upperBowls h2{
+
+  transform: rotate(15deg);
+}
 .ball2 h2 {
   font-size: 2.9rem;
 }
@@ -222,12 +225,39 @@ section .ball2 {
   position: absolute;
   top: 15rem;
   left: 30rem;
+  animation: animate 1.5s linear infinite;
+}
+@keyframes animate {
+  0%{
+      transform: translate(-11px,0);
+  }
+  50%{
+      transform: translate(-0px,-11px);
+  }
+  100%{
+      transform: translate(-11px,0);
+  }
+}
+.ball2{
+  animation: animate2 1.5s linear infinite;
+}
+@keyframes animate2 {
+  0%{
+      transform: translate(11px,0);
+  }
+  50%{
+      transform: translate(-0px,-11px);
+  }
+  100%{
+      transform: translate(11px,0);
+  }
 }
 .candid {
   position: absolute;
   bottom: 5rem;
   transition: ease-in-out;
 }
+
 #text {
   position: absolute;
   left: 8rem;
@@ -241,7 +271,60 @@ section .ball2 {
   z-index: 9;
   /* overflow: hidden; */
 }
+.scrollDown{
+  position: absolute;
+  left: 110rem;
+  bottom:9rem;
+  display: flex;
+  margin: auto;
+  align-items: center;
+  gap: 1rem;
+  color: var(--fontColor3);
+  /* transition: ease-in-out; */
+  animation: scrolldownarrow 1.5s linear infinite ;
+}
+.scrollDown h2{
 
+  font-size: 1.8rem;
+}
+@keyframes scrolldownarrow{
+  0%{
+    transform: translateY(0);
+    opacity:0;
+  }
+  /* 20%{
+    transform: translateY(0);
+    opacity:0.2;
+  }*/
+  50%{
+    transform: translateY(1rem);
+    opacity:0.5;
+  }
+ /* 70%{
+    transform: translateY(1rem);
+    opacity:1;
+  } */
+  100%{
+    transform: translateY(0rem);
+    opacity: 0;
+  }
+}
+.scrolldown{
+  font-size: 3.9rem;
+}
+.callus1 {
+  margin: 0;
+  margin-bottom: 33px;
+  padding: 0;
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  width: 64px !important;
+  z-index: 99999999999;
+  float: right;
+  font-size: 5rem;
+  color: var(--fontColor2);
+}
 /********************************About Us*************************************/
 
 .aboutAndSkills {
@@ -342,14 +425,7 @@ section .ball2 {
   transform: translateY(-0.5rem);
   /* transition: transform ease-in-out 0.1s; */
 }
-/* .skills :nth-child(1):hover{
-  color: pink;
-}
-.skills :nth-child(2):hover{
-  color: orange;#00cdf2
-} */
-/* .skills li{
-  /* transition: color 0.1s ease-in-out; */
+
 
 .skills li:nth-child(1):hover {
   color: #e3803c;
@@ -424,15 +500,31 @@ div[class*="Info"] :nth-child(2) {
   opacity: 0.3;
 }
 
-/********************************About Us*************************************/
+
 
 .projectCardContainer {
   width: 90%;
   margin: auto;
   display: grid;
   gap: 1.5rem;
-  grid-template-columns: repeat(3,1fr);
+  /* grid-template-columns: repeat(4,1fr); */
+  
+}
 
+@media (min-width:800px) {
+  .projectCardContainer{
+    grid-template-columns: repeat(4,1fr);
+    
+  } 
+  .grid-col-span-2{
+    grid-column: span 2 ;
+  }
+  .lastProjectCard{
+    grid-column-start:4;
+    grid-row: 1 / 3;
+    /* grid-row: span 2; */
+    /*grid-row-end: 3;*/
+  }
 }
 .projectCard {
   color: white;
@@ -440,11 +532,11 @@ div[class*="Info"] :nth-child(2) {
   background-position: center;
   background-size: cover;
   /* padding: 1.5rem; */
-  height: 30rem;
-  max-width: 35rem;
+  min-height: 30rem;
+  /* max-width: 35rem; */
   display: flex;
   flex-direction: column;
-  /* justify-content: flex-end; */
+  justify-content: flex-end;
   border-radius: 0.8rem;
   overflow: hidden;
   transition: transform 250ms ease;
@@ -460,7 +552,7 @@ div[class*="Info"] :nth-child(2) {
     hsl(20 0% 0%/0.3) 20%,
     hsl(0 0% 0%/1)
   );
-  transform: translateY(55%);
+  /* transform: translateY(55%); */
   transition: transform 500ms ease;
 }
 
@@ -485,9 +577,13 @@ div[class*="Info"] :nth-child(2) {
   }
 
 }
-.projectCard h2 {
+.projectCardTitle{
   /* margin: 1rem 0; */
   font-size: 3rem;
+}
+.grid-col-span-2 .projectCardTitle{
+
+  margin-top: -2.5rem;
 }
 .projectCardP1 {
   font-size: 1.5rem;
@@ -593,6 +689,19 @@ div[class*="Info"] :nth-child(2) {
   width: 100%;
 
 }
+.fb{
+  color: var(--backGroundColor1);
+}
+.tw{
+  color: var(--backGroundColor1);
+}
+.ln{
+  color: var(--backGroundColor1);
+}
+.insta{
+  color: var(--backGroundColor1);
+}
+
 .wrapper{
   height: 3rem;
 }
@@ -610,7 +719,7 @@ div[class*="Info"] :nth-child(2) {
   transition: all 0.3s ease-out;
 }
 .wrapper .button:hover{
-  width: 20rem;
+  width: 17.5rem;
 }
 .wrapper .button .icon{
   display: inline-block;
@@ -621,6 +730,10 @@ div[class*="Info"] :nth-child(2) {
   box-sizing: border-box;
   line-height: 3rem;
   transition: all 0.3s ease-out;
+}
+.buttonIconText
+{
+  /* padding-bottom: 2rem; */
 }
 .wrapper .button:nth-child(1):hover .icon{
   background: #4267B2;
@@ -638,7 +751,7 @@ div[class*="Info"] :nth-child(2) {
   background: #ff0000;
 }
 .wrapper .button .icon i{
-  font-size: 25px;
+  font-size: 3rem;
   line-height: 4.9rem;
   transition: all 0.3s ease-out;
 }
@@ -650,6 +763,7 @@ div[class*="Info"] :nth-child(2) {
   font-weight: 500;
   line-height: 4.9rem;
   margin-left: 1rem;
+  margin-bottom: 1rem;
   transition: all 0.3s ease-out;
 }
 .wrapper .button:nth-child(1) span{
@@ -684,6 +798,7 @@ div[class*="Info"] :nth-child(2) {
   display: flex;
   align-items: center;
   list-style: none;
+  cursor: pointer;
   /* justify-content: space-around; */
 
 }
