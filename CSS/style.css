@@ -44,8 +44,29 @@ body {
   height: 100vh;
   width: 100vw;
   background-color: var(--backGroundColor1);
-  scroll-behavior: smooth;
 }
+html{
+  scroll-behavior: smooth;
+
+}
+@keyframes fade-up{
+  0%{
+    transform: translateY(10rem);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+.heroSection {
+  position: relative;
+  height: 110vh;
+  display: flex;
+  /* overflow: hidden; */
+  /* width: 100%; */
+  padding: 0 10rem;
+  background-color: var(--backGroundColor2);
+}
+.herosection
 .intialHeight {
   overflow: hidden;
 }
@@ -62,6 +83,17 @@ body {
   transition: transform 1000ms, border-radius 1000ms;
   overflow: hidden;
   /* border-radius:  0 0 20% 20% ; */
+}
+.mainIMG{
+  height:100%;
+  object-fit: cover;
+  display: block;
+  margin: auto;
+  animation: fade-up 500ms ease-in-out ;
+  animation-delay: 1.62s;
+}
+.mainIMG img{
+  height: 100%;
 }
 .wrapperr {
   box-sizing: content-box;
@@ -111,15 +143,6 @@ body {
     transform: translateY(-400%);
   }
 }
-.heroSection {
-  position: relative;
-
-  height: 110vh;
-  /* overflow: hidden; */
-  /* width: 100%; */
-  padding: 0 10rem;
-  background-color: var(--backGroundColor2);
-}
 
 /***************************************** Header******************************** */
 header {
@@ -138,14 +161,7 @@ header {
   animation: fade-up 500ms ease-in-out;
   animation-delay: 1.9s;
 }
-@keyframes fade-up{
-  0%{
-    transform: translateY(10rem);
-  }
-  100%{
-    transform: translateY(0);
-  }
-}
+
 
 
 .navbar {
@@ -238,7 +254,7 @@ section .ball2 {
   position: absolute;
   top: 15rem;
   left: 30rem;
-  animation: animate 1.5s linear 1.77s infinite,fade-up 500ms ease-in-out 1.7s;
+  animation: animate 2.5s linear 1.77s infinite,fade-up 500ms ease-in-out 1.7s;
   
 }
 @keyframes animate {
@@ -256,7 +272,7 @@ section .ball2 {
 .ball2{
   transition: transform ease-in-out;
 
-  animation: animate2 1.5s linear 1.68s infinite,fade-up 500ms ease-in-out 1.64s;
+  animation: animate2 2.5s linear 1.68s infinite,fade-up 500ms ease-in-out 1.64s;
 }
 @keyframes animate2 {
   0%{
@@ -340,10 +356,14 @@ section .ball2 {
   bottom: 10px;
   left: 10px;
   width: 64px !important;
-  z-index: 99999999999;
+  z-index: 1999;
   float: right;
   font-size: 5rem !important;
-  color: var(--fontColor2);
+  color: #fff;
+  transition: color 500ms ease;
+}
+.callus1:hover{
+  color: #189d0e;
 }
 /********************************About Us*************************************/
 
@@ -376,7 +396,6 @@ section .ball2 {
   transform: rotate(-8deg);
   color: var(--fontColor2);
   font-family: "Pacifico", cursive;
-
   opacity: 0.3;
 }
 .aboutInfo {
@@ -403,6 +422,7 @@ section .ball2 {
   font-size: 2rem;
   line-height: 1.5;
 }
+/* ********************Skilss****************************************** */
 .skillOuter {
   display: flex;
   /* align-items: center; */
@@ -410,7 +430,22 @@ section .ball2 {
   flex-direction: column;
   height: 50%;
   padding: 2rem 0 0 0;
+  position: relative;
 }
+.skillOuter >h2{
+  font-size: 20rem;
+  font-family: "Pacifico", cursive;
+  font-weight: lighter ;
+  color: var(--fontColor2);
+  opacity: 0.1;
+  position: absolute;
+  left: 28%;
+  letter-spacing: 1.7rem;
+  z-index: 0;
+  text-shadow: 0 0 1rem rgb(0, 0, 0);
+
+}
+
 .skills {
   display: flex;
   height: auto;
@@ -420,6 +455,7 @@ section .ball2 {
   padding: 2rem 2rem;
   font-size: 2.2rem;
   color: var(--fontColor2);
+  z-index: 5000;
 }
 .tops a {
   text-decoration: none;
@@ -427,7 +463,10 @@ section .ball2 {
   font-weight: bold;
   letter-spacing: 0.8px;
 }
-
+.tops >img{
+  margin-top: -2.5rem;
+  margin-bottom: -1.8rem;
+}
 /* .tops a:hover
 {
   color: var(--fontColor3) ;
@@ -477,10 +516,10 @@ section .ball2 {
 .skill2 li:nth-child(3):hover {
   color: #005c83;
 }
-.skill2 li:nth-child(4):hover {
+.skill2 li:nth-child(5):hover {
   color: #4d80ac;
 }
-.skill2 li:nth-child(5):hover {
+.skill2 li:nth-child(6):hover {
   color: #7348af;
 }
 
@@ -548,7 +587,6 @@ div[class*="Info"] :nth-child(2) {
 }
 .projectCard {
   color: white;
-  background: url(../Images/disney-1024-1.webp);
   background-position: center;
   background-size: cover;
   /* padding: 1.5rem; */
@@ -559,10 +597,41 @@ div[class*="Info"] :nth-child(2) {
   justify-content: flex-end;
   border-radius: 0.8rem;
   overflow: hidden;
-  transition: transform 250ms ease;
+  transition: transform 250ms ease, box-shadow 250ms ease;
+}
+.projectCard:nth-child(1){
+  background: url(../Images/disney-1024-1.webp);
+  background-position: center;
+  background-size: cover;
+
+}
+.projectCard:nth-child(2){
+  background: url(../Images/netflix.jpeg.jpg);
+  background-position: center;
+  background-size: cover;
+
+}
+.projectCard:nth-child(3){
+  background: url(../Images/Instagram.jpeg.jpg);
+  background-position: center;
+  background-size: cover;
+
+}
+.projectCard:nth-child(4){
+  background: url(../Images/chat.jpg);
+  background-position: center;
+  background-size: cover;
+
+}
+.projectCard:nth-child(5){
+  background: url(../Images/1000_F_305642704_WkMfdjyVKufNvaENA8NfGc6CAoKEpedC.jpg);
+  background-position: right;
+  background-size: cover;
+
 }
 .projectCard:hover {
   transform: scale(1.02);
+  box-shadow: 0 0 2rem 1.3rem var(--backGroundColor1);
 }
 .projectCardContent {
   line-height: 1.6;
@@ -592,7 +661,6 @@ div[class*="Info"] :nth-child(2) {
     opacity: 1;
   }
   .projectCard{
-
     justify-content: flex-end;
   }
 
@@ -600,32 +668,35 @@ div[class*="Info"] :nth-child(2) {
 .projectCardTitle{
   /* margin: 1rem 0; */
   font-size: 3rem;
+  /* color: var(--fontColor3); */
+
 }
 .grid-col-span-2 .projectCardTitle{
 
   margin-top: -2.5rem;
 }
 .projectCardP1 {
+  /* color: var(--fontColor3); */
   font-size: 1.5rem;
 }
 
 .projectButton {
-  color: pink;
+  color: white;
   text-decoration: none;
   cursor: pointer;
   font-size: 1.3rem;
-  padding: 0.5rem;
+  padding: 0.8rem;
   display: inline-block;
   margin: 1rem 0;
-  background-color: #00417b;
-  border-radius: 0.2rem;
+  background-color: var(--backGroundColor1);
+  border-radius: 0.7rem;
 }
 
 
 /* **************************Connect************************************************ */
 .connect {
   background-color: var(--backGroundColor1);
-  max-height: 100%;
+  min-height: 100%;
   max-width: 100%;
   overflow-x: hidden;
   padding: 7rem;
@@ -636,6 +707,7 @@ div[class*="Info"] :nth-child(2) {
 }
 .connect1 {
   width: 50%;
+padding-left: 3.9rem;
 }
 .connect2 {
   width: 50%;
@@ -673,7 +745,7 @@ div[class*="Info"] :nth-child(2) {
   transform: rotate(9deg);
   position: absolute;
   left: 33rem;
-  bottom: 10rem;
+  bottom: 12rem;
 }
 .ball3 h2 {
   line-height: 3rem;
@@ -712,7 +784,14 @@ div[class*="Info"] :nth-child(2) {
   margin-right: 3rem;
   margin-bottom: 2rem;
 }
-.codeIcons a[title]:hover::after{
+.top2
+{
+  transition: transform ease-in-out 0.2s, color ease-in-out 0.2s;
+}
+.top2:hover {
+  transform: translateY(-0.5rem);
+}
+/* .codeIcons a[title]:hover::after{
 content: attr(title);
 position: absolute;
 background: #fff;
@@ -724,12 +803,12 @@ padding: 0.5rem 1rem;
 justify-content: center;
 flex-direction: column;
 position: relative;
-z-index: 2; */
+z-index: 2; 
 top: 11rem;
 right: 45%;
 
-}
-.codeIcons a[title]:hover::before{
+} */
+/* .codeIcons a[title]:hover::before{
 position: absolute;
 content: "";
 height: 15px;
@@ -738,7 +817,7 @@ background: #fff;
 top: 13rem;
 right: 47.3%;
 transform: translateX(-50%) rotate(45deg);
-}
+} */
 
 .socialIcons
 {
@@ -885,15 +964,23 @@ transform: translateX(-50%) rotate(45deg);
 .Footer
 {
     display: flex;
+    gap: 1rem;
     flex-direction: column;
     align-items: center;
-    background-color: var(--backGroundColor2);
+    background-color: var(--backGroundColor1);
     color:var(--fontColor2);
-    padding: 2rem;
-    font-size: 1.5rem;
+    padding: 0 2rem 2rem 2rem;
+    font-size: 1rem;
+    position: relative;
+    margin-top: -2.5rem;
+}
+footer >h2{
+  position: absolute;
+  bottom: 1rem;
+  right:1rem
 }
 .Mystery{
-  font-size: 2rem;
-  padding: 1rem;
-  color: #fff;
+  text-align: center;
+  font-size:1.5rem
+  /* filter: grayscale(100%); */
 }
