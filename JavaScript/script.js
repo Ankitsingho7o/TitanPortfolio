@@ -5,10 +5,10 @@ setTimeout(function(){
     words[0].style.transform="translateY(-100%)";
      words[0].style.borderRadius="0 0 50% 50%"
      words[0].style.scale= "1.1"
-     body[0].classlist;
+     body.classlist;
     console.log(body.classList);
     body.classList.remove("intialHeight");
-     bodyClasslist.remove("intialHeight")
+    //  bodyClasslist.remove("intialHeight")
 },1600)
 
 let text = document.getElementsByClassName("candid");
