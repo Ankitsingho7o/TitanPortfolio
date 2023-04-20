@@ -16,18 +16,15 @@ html {
   /* 10px default size for desktop sizez  */
   font-size: 62.5%;
 }
-/* /* @media screen and (max-width: 1424px) {
-  .html{
-    font-size:50%;
-    /* background: orange; */
-/* @media (max-width: 998px) {
-  html {
-    font-size: 53%;
-  }
-} */
+
 @media screen and (max-width: 1280px) {
   html {
     font-size: 56%;
+  }
+}
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 45%;
   }
 }
 * {
@@ -36,6 +33,7 @@ html {
   /* font-size: 45px; */
   font-weight: 500;
   font-family: "Anuphan", sans-serif;
+  /* box-sizing: border-box; */
   /* border: 0.2px solid black; */
   /* overflow-x: hidden; */
 }
@@ -216,7 +214,7 @@ header {
 .signName span {
   color: var(--fontColor3);
 }
-/* *******************************Hero Section******************** */
+/********************************Hero Section*********************/
 .balls {
   width: 15rem;
   height: 15rem;
@@ -424,6 +422,7 @@ section .ball2 {
   font-size: 2rem;
   line-height: 1.5;
 }
+
 /* ********************Skilss****************************************** */
 .skillOuter {
   display: flex;
@@ -524,7 +523,34 @@ section .ball2 {
 .skill2 li:nth-child(6):hover {
   color: #7348af;
 }
-
+/* About and Skills Responsive */
+@media (max-width:768px){
+  .aboutAndSkills{
+    height: auto;
+  }
+  .about{
+    flex-direction: column;
+  }
+  .aboutCursive{
+    width:100%;
+  }
+  .aboutInfo{
+    width:100%;
+  }
+  .skillOuter >h2{
+    font-size: 15rem;
+    left:0%;
+  }
+  .skills{
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .tops{
+    margin: 0 2rem;
+    /* padding: 2rem; */
+  }
+}
 /*********************************Project *******************************/
 
 .project {
@@ -549,7 +575,7 @@ div[class*="Info"] :nth-child(2) {
   font-size: 7rem;
   display: flex;
   align-items: center;
-  justify-content: center;
+  text-align: center;
   margin-bottom: 6rem;
   margin-top: -8rem;
 }
@@ -560,8 +586,6 @@ div[class*="Info"] :nth-child(2) {
   font-weight: thin !important;
   opacity: 0.3;
 }
-
-
 
 .projectCardContainer {
   width: 90%;
@@ -692,6 +716,18 @@ div[class*="Info"] :nth-child(2) {
   margin: 1rem 0;
   background-color: var(--backGroundColor1);
   border-radius: 0.7rem;
+}
+/* Project Responsive  */
+
+@media (max-width:768px){
+ .project{
+  padding: 3rem;
+ }
+ .projectCursive{
+  font-size: 5rem;
+  margin-bottom: 2rem;
+
+ }
 }
 
 
