@@ -18,19 +18,21 @@ console.log(text);
         window.addEventListener("scroll",function(){
             
             let value = window.scrollY;
-            if(value<=536){
-            text[0].style.marginLeft = value*1.1 + 'px';}
+            // console.log(value);
+            // console.log(window.screen.width);
+            // if(value<=536){
+            text[0].style.marginLeft = value*1.1 + 'px';
             
         })
 
-        $(function(){
-            $(".toggleMenu").on("click",function(){
-                if($(".nav1").hasClass("active")){
-                $(".nav1").removeClass("active");
-                $(this).find("a").html("<i class='fa-solid fa-bars fa-2xl'></i>");
-            } else{
-                   $(".nav1").addClass("active");
-                    $(this).find("a").html("<i class='fa-solid fa-xmark fa-2xl'></i>");
-            }
-});
-        });
+//         $(function(){
+//             $(".toggleMenu").on("click",function(){
+//                 if($(".nav1").hasClass("active")){
+//                 $(".nav1").removeClass("active");
+//                 $(this).find("a").html("<i class='fa-solid fa-bars fa-2xl'></i>");
+//             } else{
+//                    $(".nav1").addClass("active");
+//                     $(this).find("a").html("<i class='fa-solid fa-xmark fa-2xl'></i>");
+//             }
+// });
+//         });
