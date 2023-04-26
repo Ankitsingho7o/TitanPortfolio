@@ -1,8 +1,25 @@
 let words= document.getElementsByClassName("fullpage");
 let body= document.querySelector("body");
 
+let navButton = document.querySelector(".mobile-navbar-button");
+let header= document.querySelector(".header");
+let navLinks = document.querySelectorAll(".navLinks")
+
+
+navButton.addEventListener("click", ()=>{
+    console.log(header.classList);
+header.classList.toggle("active");
+})
+navLinks.forEach(item  =>{
+    item.addEventListener("click", ()=>{
+    
+        header.classList.toggle("active");
+        })
+})
+
+
 setTimeout(function(){
-    words[0].style.transform="translateY(-100%)";
+    words[0].style.transform="translateY(-100%)"
      words[0].style.borderRadius="0 0 50% 50%"
      words[0].style.scale= "1.1"
      body.classlist;
@@ -25,14 +42,3 @@ console.log(text);
             
         })
 
-//         $(function(){
-//             $(".toggleMenu").on("click",function(){
-//                 if($(".nav1").hasClass("active")){
-//                 $(".nav1").removeClass("active");
-//                 $(this).find("a").html("<i class='fa-solid fa-bars fa-2xl'></i>");
-//             } else{
-//                    $(".nav1").addClass("active");
-//                     $(this).find("a").html("<i class='fa-solid fa-xmark fa-2xl'></i>");
-//             }
-// });
-//         });

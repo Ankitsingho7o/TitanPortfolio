@@ -15,6 +15,7 @@ html::-webkit-scrollbar {
 html {
   /* 10px default size for desktop sizez, here 1rem=10px */
   font-size: 62.5%;
+  /* overflow-x: hidden; */
 }
 
 @media screen and (max-width: 1280px) {
@@ -44,6 +45,8 @@ body {
   background-color: var(--backGroundColor1);
   scroll-snap-type: y proximity;
   overflow-y: scroll;
+  /* overflow-x: hidden; */
+  position: relative;
 }
 html {
   scroll-behavior: smooth;
@@ -64,10 +67,12 @@ html {
   /* width: 100%; */
   padding: 0 9rem;
   background-color: var(--backGroundColor2);
+  /* background-image: url(../Images/IMG_20220507_221922-removebg\ \(2\).png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat; */
   overflow: hidden;
 }
-
-
 
 .intialHeight {
   overflow: hidden;
@@ -88,7 +93,9 @@ html {
 }
 .mainIMG {
   height: 100%;
-  object-fit: cover;
+  /* width: 100%;
+  margin:auto; */
+  object-fit: fill;
   display: block;
   margin: auto;
   animation: fade-up 500ms ease-in-out;
@@ -145,45 +152,44 @@ html {
     transform: translateY(-400%);
   }
 }
-@media (max-width:786px){
-  .heroSection{
+@media (max-width: 786px) {
+  /* .heroSection{
     height:85vh;
-  }
-  .mainIMG{
-    height:90%;
+  } */
+  .mainIMG {
+    height: 90%;
     position: absolute;
     bottom: 0;
     z-index: 0;
+    display: flex;
+    align-items: center;
+    margin-left: -5rem;
   }
 }
 /***************************************** Header******************************** */
 header {
   z-index: 1000;
   position: absolute;
-  width: 100%;
   top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--backGroundColor2);
   display: flex;
-  /* align-items: center;
-  justify-content: center; */
-  /* padding: 2.3rem 7rem; */
+  align-items: center;
+  justify-content: space-around;
   list-style: none;
-  background: transparent;
-  /* margin-top: 1.5rem 15rem; */
-  overflow-x: hidden;
+  padding: 5rem;
+  box-sizing: border-box;
   animation: fade-up 500ms ease-in-out;
   animation-delay: 1.9s;
 }
 
-.navbar {
+.nav {
   display: flex;
-  margin: auto;
-  width: 100%;
-  padding: 5rem 5rem;
   list-style: none;
-  justify-content: space-around;
 }
-
 .navLinks a {
+  display: inline-block;
   padding: 0 2rem;
   text-decoration: none;
   font-size: 2.2rem;
@@ -206,14 +212,9 @@ header {
   width: 80%;
   border-radius: 0;
 }
-.navbar a:hover {
+.navLinks a:hover,
+.navLinks a:active {
   color: #fff;
-}
-
-.nav {
-  display: flex;
-  /* width: 100%; */
-  justify-content: space-around;
 }
 
 .signName {
@@ -226,26 +227,66 @@ header {
 .span {
   color: var(--fontColor3);
 }
-.toggleMenu {
+
+.mobile-navbar-button {
   font-size: 1.5rem;
   color: #fff;
   cursor: pointer;
   display: none;
 }
-@media screen and (max-width: 600px) {
-  .nav1 {
-    display: block;
-    position: relative;
-    padding: 15px 20px;
+
+.cross{
+  display: none;
+}
+
+@media (max-width: 980px) {
+  header {
+    justify-content: flex-start;
   }
   .nav1 {
-    margin-top: 15px;
+    /* display: none; */
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    gap: 1.8rem;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--backGroundColor1);
+    flex-direction: column;
+    transform: translateY(100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s linear;
+    z-index: 99999999;
+    /* justify-content: \; */
+  }
+  .navLinks a {
+    font-size: 3.5rem;
+  }
+  .mobile-navbar-button {
+    display: block;
+    z-index: 99999999999;
+    position: absolute;
+    top: 5rem;
+    right: 5rem;
+  }
+  .navLinks a:after {
+    left: 1.1rem;
+    bottom: -0.6rem;
+  }
+  .active .nav1{
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+  .active .mobile-navbar-button .fa-bars{
     display: none;
   }
-  .nav1.active {
-    display: block;
-  }
-  .toggleMenu {
+  .active .mobile-navbar-button .cross{
+
     display: block;
   }
 }
@@ -279,9 +320,7 @@ section .ball2 {
 .upperBowls h2 {
   transform: rotate(15deg);
 }
-.ball2 h2 {
-  font-size: 2.9rem;
-}
+
 .ball1 {
   position: absolute;
   top: 15rem;
@@ -326,7 +365,7 @@ section .ball2 {
 #text {
   position: absolute;
   left: 8rem;
-  bottom: 6rem;
+  bottom: 4rem;
   /* right: ; */
   color: #fff;
   white-space: nowrap;
@@ -400,6 +439,7 @@ section .ball2 {
 }
 @media (max-width: 768px) {
   .heroSection {
+    height: 100vh;
     padding: 0 3rem;
   }
   .ball1 {
@@ -415,6 +455,9 @@ section .ball2 {
     width: 11rem !important;
     height: 11rem !important;
     font-size: 1.7rem !important;
+  }
+  .balls h2 {
+    font-size: 2.1rem;
   }
   #text {
     left: -2rem;
@@ -623,7 +666,6 @@ section .ball2 {
   font-size: 4rem;
   width: 35%;
   color: var(--ballColor);
-
 }
 .skillsTitle h3 {
   font-weight: bold;
@@ -750,9 +792,8 @@ div[class*="Info"] :nth-child(2) {
   margin: 2rem 0;
   font-size: 3rem;
 }
-@media (max-width:786px){
-  div[class*="Info"]:nth-child(2){
-
+@media (max-width: 786px) {
+  div[class*="Info"]:nth-child(2) {
     font-size: 3.5rem;
   }
 }
@@ -937,9 +978,8 @@ div[class*="Info"] :nth-child(2) {
   line-height: 11.5rem;
   /* margin-bottom: 0; */
 }
-@media (max-width:786px){
-  .letsconnect >h1{
-    
+@media (max-width: 786px) {
+  .letsconnect > h1 {
     display: inline-block;
   }
 }
@@ -1217,9 +1257,7 @@ transform: translateX(-50%) rotate(45deg);
     font-size: 1.7rem;
     margin-left: 10%;
   }
-  .balls h2 {
-    font-size: 1.7rem;
-  }
+
   .wrapper .button:nth-child(1) .icon {
     background: #4267b2;
   }
