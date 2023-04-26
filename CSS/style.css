@@ -46,7 +46,6 @@ body {
   scroll-snap-type: y proximity;
   overflow-y: scroll;
   /* overflow-x: hidden; */
-  position: relative;
 }
 html {
   scroll-behavior: smooth;
@@ -220,7 +219,7 @@ header {
 .signName {
   padding: 1.1rem 2rem;
   text-decoration: none;
-  font-size: 2.2rem;
+  font-size: 2.6rem;
   color: white;
   letter-spacing: 0.5px;
 }
@@ -235,7 +234,7 @@ header {
   display: none;
 }
 
-.cross{
+.mobile-navbar-button .cross{
   display: none;
 }
 
@@ -286,7 +285,6 @@ header {
     display: none;
   }
   .active .mobile-navbar-button .cross{
-
     display: block;
   }
 }
@@ -303,7 +301,7 @@ header {
   padding: 1.2rem;
   z-index: 1;
 }
-section .ball2 {
+.ball2 {
   width: 18rem;
   height: 18rem;
   position: absolute;
@@ -445,19 +443,19 @@ section .ball2 {
   .ball1 {
     top: 20rem;
     left: 8rem;
-    width: 11rem;
-    height: 11rem;
-    font-size: 1.7rem;
+    width: 13rem;
+    height: 13rem;
+
   }
   .ball2 {
-    bottom: 16rem !important;
-    right: 2rem !important;
-    width: 11rem !important;
-    height: 11rem !important;
-    font-size: 1.7rem !important;
+    bottom: 16rem;
+    right: 2rem ;
+    width: 13rem ;
+    height: 13rem ;
+   
   }
-  .balls h2 {
-    font-size: 2.1rem;
+  .upperBowls h2 {
+    font-size: 2.6rem;
   }
   #text {
     left: -2rem;
@@ -1243,13 +1241,13 @@ transform: translateX(-50%) rotate(45deg);
     margin: 2rem;
   }
   .ball3 {
-    width: 11rem;
-    height: 11rem;
-    font-size: 1.7rem;
+    width: 14rem;
+    height: 14rem;
+    font-size: 1.5rem;
     left: 50%;
   }
   .ball3 h2 {
-    line-height: 2.1rem;
+    line-height: 2.2rem;
   }
   .ball4 {
     width: 11rem;

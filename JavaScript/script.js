@@ -5,11 +5,18 @@ let navButton = document.querySelector(".mobile-navbar-button");
 let header= document.querySelector(".header");
 let navLinks = document.querySelectorAll(".navLinks")
 
+let cross = document.querySelector(".cross");
 
-navButton.addEventListener("click", ()=>{
-    console.log(header.classList);
+// console.log(cross.style);
+// const toggleNavbar =()=>{
+//     console.log(header.classList);
+
+// }
+navButton.addEventListener("click", function() {
 header.classList.toggle("active");
+    
 })
+
 navLinks.forEach(item  =>{
     item.addEventListener("click", ()=>{
     
@@ -20,7 +27,12 @@ navLinks.forEach(item  =>{
 
 setTimeout(function(){
     words[0].style.transform="translateY(-100%)"
-     words[0].style.borderRadius="0 0 50% 50%"
+     if(window.innerWidth<=400){
+
+         words[0].style.borderRadius="0 0 35% 35%"
+     }else{
+        words[0].style.borderRadius="0 0 50% 50%"
+     }
      words[0].style.scale= "1.1"
      body.classlist;
     console.log(body.classList);
