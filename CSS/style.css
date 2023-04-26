@@ -313,7 +313,7 @@ header {
 .balls h2 {
   color: var(--fontColor1);
   font-weight: bold;
-  font-size: 2.3rem;
+  font-size: 2rem;
 }
 .upperBowls h2 {
   transform: rotate(15deg);
@@ -459,9 +459,9 @@ header {
   }
   #text {
     left: -2rem;
-    bottom: 2rem;
-    font-size: 7rem;
-  }
+    bottom: 4.3rem;
+    font-size: 7.5rem;
+}
   .scrollDown {
     left: 40rem;
     bottom: 3rem;
@@ -1241,13 +1241,14 @@ transform: translateX(-50%) rotate(45deg);
     margin: 2rem;
   }
   .ball3 {
-    width: 14rem;
-    height: 14rem;
+    width: 11rem;
+    height: 11rem;
     font-size: 1.5rem;
     left: 50%;
   }
   .ball3 h2 {
     line-height: 2.2rem;
+    font-size: 1.75rem;
   }
   .ball4 {
     width: 11rem;
