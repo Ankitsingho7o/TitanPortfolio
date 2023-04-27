@@ -405,6 +405,7 @@ header {
   color: var(--ballColor);
   z-index: 1500000000;
   transition: all 0.1s linear;
+  cursor: pointer;
 }
 
 @keyframes scrolldownarrow {
@@ -1097,6 +1098,10 @@ transform: translateX(-50%) rotate(45deg);
   /* display: grid;
   height: 100%; */
   width: 100%;
+}
+.socialIcons h2{
+  font-size: 1rem;
+  color: white;
 }
 .fb {
   color: var(--backGroundColor1);

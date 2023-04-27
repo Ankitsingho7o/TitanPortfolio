@@ -19,8 +19,8 @@ function scrollUp() {
     }
   }
   backToTop.addEventListener("click", function () {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = -1;
+    document.documentElement.scrollTop = -1;
   })
 navButton.addEventListener("click", function() {
 header.classList.toggle("active");
