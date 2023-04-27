@@ -234,7 +234,7 @@ header {
   display: none;
 }
 
-.mobile-navbar-button .cross{
+.mobile-navbar-button .cross {
   display: none;
 }
 
@@ -276,15 +276,15 @@ header {
     left: 1.1rem;
     bottom: -0.6rem;
   }
-  .active .nav1{
+  .active .nav1 {
     transform: translateY(0);
     opacity: 1;
     visibility: visible;
   }
-  .active .mobile-navbar-button .fa-bars{
+  .active .mobile-navbar-button .fa-bars {
     display: none;
   }
-  .active .mobile-navbar-button .cross{
+  .active .mobile-navbar-button .cross {
     display: block;
   }
 }
@@ -393,6 +393,20 @@ header {
 .scrollDown h2 {
   font-size: 1.8rem;
 }
+.backToTop {
+  opacity: 0;
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  font-size: 3rem;
+  border: 0.2rem solid var(--ballColor2);
+  padding: 1.4rem 1.5rem;
+  border-radius: 100%;
+  color: var(--ballColor);
+  z-index: 1500000000;
+  transition: all 0.1s linear;
+}
+
 @keyframes scrolldownarrow {
   0% {
     transform: translateY(0);
@@ -445,14 +459,12 @@ header {
     left: 8rem;
     width: 13rem;
     height: 13rem;
-
   }
   .ball2 {
     bottom: 16rem;
-    right: 2rem ;
-    width: 13rem ;
-    height: 13rem ;
-   
+    right: 2rem;
+    width: 13rem;
+    height: 13rem;
   }
   .upperBowls h2 {
     font-size: 2.6rem;
@@ -461,12 +473,12 @@ header {
     left: -2rem;
     bottom: 4.3rem;
     font-size: 7.5rem;
-}
+  }
   .scrollDown {
     left: 40rem;
     bottom: 3rem;
   }
-  .callus1{
+  .callus1 {
     bottom: 9rem;
   }
 }

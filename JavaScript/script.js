@@ -6,12 +6,22 @@ let header= document.querySelector(".header");
 let navLinks = document.querySelectorAll(".navLinks")
 
 let cross = document.querySelector(".cross");
+let backToTop = document.querySelector(".backToTop");
 
-// console.log(cross.style);
-// const toggleNavbar =()=>{
-//     console.log(header.classList);
-
-// }
+window.onscroll = function (){
+    scrollUp()
+}
+function scrollUp() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      backToTop.style.opacity = "1";
+    } else {
+      backToTop.style.opacity = "0";
+    }
+  }
+  backToTop.addEventListener("click", function () {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  })
 navButton.addEventListener("click", function() {
 header.classList.toggle("active");
     
