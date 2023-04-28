@@ -179,8 +179,8 @@ header {
   list-style: none;
   padding: 5rem;
   box-sizing: border-box;
-  animation: fade-up 500ms ease-in-out;
-  animation-delay: 1.9s;
+  /* animation: fade-up 500ms ease-in-out; */
+  /* animation-delay: 1.9s; */
 }
 
 .nav {
